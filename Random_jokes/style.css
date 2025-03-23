@@ -9,6 +9,7 @@ html,body{
 body{
    display: flex;
    align-items: center;
+   background-color: black;
 }
 .container{
     height: 300px;
@@ -27,11 +28,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    color:#2C2F24;
+    color:aliceblue;
 }
 h1{
     font-family: "Open Sans", sans-serif ;
     margin-bottom: 10px;
     font-size: 30px;
+    color: aliceblue;
     
 }
