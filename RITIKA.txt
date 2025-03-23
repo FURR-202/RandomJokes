@@ -1,0 +1,4 @@
+Ajax is not a programming language,its is a set of existing technology.
+It helps in fetching data asynochronously 
+no page reload/refresh occurred
+      -->RITIKA 11
