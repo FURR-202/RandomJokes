@@ -1,0 +1,95 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: black !important;
+    display: flex;
+    align-items: center;
+}
+.container{
+    height: 500px;
+    width: 400px !important;
+    background-color: whitesmoke;
+    background-image: url("https://images.pexels.com/photos/907485/pexels-photo-907485.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    height: 50px;
+    width: 300px;
+    border-radius: 20px;
+    text-align: center;
+    background: hsla(64, 41%, 92%, 1);
+
+    background: linear-gradient(90deg, hsla(64, 41%, 92%, 1) 0%, hsla(196, 83%, 84%, 1) 50%, hsla(305, 75%, 83%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(64, 41%, 92%, 1) 0%, hsla(196, 83%, 84%, 1) 50%, hsla(305, 75%, 83%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(64, 41%, 92%, 1) 0%, hsla(196, 83%, 84%, 1) 50%, hsla(305, 75%, 83%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F2F3E2", endColorstr="#B2E5F8", GradientType=1 );
+}
+
+.inner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    height: 50px;
+    width: 200px;
+    background-color:#a2d2ff;
+    margin-top: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+#box1{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    opacity: 80%;
+}
+#box1 h2{
+    font-size: 3rem;
+    color:#03045e;
+    font-weight: 500;
+}
+.box h6{
+    color:#1b263b;
+    
+}
+#box2{
+    width: 300px;
+    height: 50px;
+    background-color: #fcd5ce;
+    border-radius: 12px;
+}
+#box3{
+    height: 50px;
+    width: 100px;
+}
+p{
+    font-size:x-large;
+    font-weight:500;
+    word-spacing: 3px;
+    letter-spacing: 1.1px;
+}
+.btn{
+    margin-top: 30px;
+    width: 190px;
+}
