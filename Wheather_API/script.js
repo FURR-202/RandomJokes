@@ -116,33 +116,48 @@
 //     console.log(a)
 // }
 // f();
-let btn = document.querySelector("button")
-let temp = document.querySelector("#box1");
-let des = document.querySelector("#box2");
-let wind = document.querySelector("#box3");
-async function whether(){
-    try{
-        btn.disabled = true
-        let response = await fetch("https://goweather.herokuapp.com/weather/ny");
-        let data = await response.json();
-        let t = document.createElement("h2");
-        let d = document.createElement("P");
-        let w = document.createElement("p");
-        t.innerText = data.temperature;
-        d.innerText = data.description;
-        w.innerText = data.wind;
-        temp.appendChild(t)
-        des.appendChild(d)
-        wind.appendChild(w)
-        console.log(data)
+let temp1  = document.querySelectorAll(".temp")[0].querySelector("h2");
+let temp2  = document.querySelectorAll(".temp")[1].querySelector("h2");
+let temp3  = document.querySelectorAll(".temp")[2].querySelector("h2");
+let description = document.querySelector("#description");
+let celsius = document.querySelector("#celsius");
+let fahrenheit = document.querySelector("#fahrenheit");
+let temperature = JSON.parse(localStorage.getItem("Temperature"));
+let decrip = JSON.parse(localStorage.getItem("Description"));
+let temp_arr = [temp1,temp2,temp3];
+function change() {
+    if(temperature.includes("°C")){
+        temperature = `${parseInt((parseInt(temperature)*9)/5) + 32} °F`;
+        temp_arr.forEach(ele => {
+            ele.innerText = temperature;
+        });
     }
-    catch(error){
-        console.log("Some error occurred")
-    }
-    finally{
-        btn.disabled = false
+    else{
+        temperature = JSON.parse(localStorage.getItem("Temperature"));
+        temp_arr.forEach(ele => {
+            ele.innerText = temperature;
+        });
     }
 }
-btn.addEventListener("click",()=>{
-    whether();
-})
+
+async function weather(){
+    try{
+        let response = await fetch("https://goweather.xyz/weather/US");
+        let data = await response.json();
+        localStorage.setItem("Temperature",JSON.stringify(data.temperature));
+        localStorage.setItem("Wind",JSON.stringify(data.wind));
+        localStorage.setItem("Description",JSON.stringify(data.description));
+        let temperature = JSON.parse(localStorage.getItem("Temperature"));
+        let decrip = JSON.parse(localStorage.getItem("Description"));
+        console.log(data);
+    }
+    catch(error){
+        console.log(error);
+    }
+}
+
+temp_arr.forEach(ele => {
+    ele.innerText = temperature;
+});
+description.innerText = decrip;
+

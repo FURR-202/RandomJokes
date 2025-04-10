@@ -9,13 +9,14 @@
 </head>
 <body>
         <div class="container">
-            <h1>Wheather API</h1>
+            <header><h1>Wheather</h1><div id="btns-box"><div id="celsius" class="button" onclick="change()">°C</div><div id="fahrenheit" class="button" onclick="change()">°F</div></div></header>
             <div class="inner-container">
-            <div class="box" id="box1"></div>
-            <div class="box" id="box3"></div>  
-            <div class="box" id="box2"></div>
-            <button type="button" class="btn btn-primary">GET Info</button> 
+                <div class="temp" id="temp1" ><img src="https://clipart-library.com/images/pi5raz6bT.png"><h2 class="text">0 c</h2></div>
+                <div class="temp" id="temp2"><img src="https://clipart-library.com/images/pi5raz6bT.png"><h2 class="text">0 c</h2></div>
+                <div class="temp" id="temp3"><img src="https://clipart-library.com/images/pi5raz6bT.png"><h2 class="text">0 c</h2></div>
+                <div id="description"></div>
             </div>
+            <button type="button" class="btn btn-primary" onclick="weather()">GET Info</button> 
         </div>
     <script src="script.js"></script>
 </body>
